@@ -18,5 +18,19 @@ lesson_10/
 
 ## Установка зависимостей
 
-```bash
 pip install -r requirements.txt
+
+Запуск тестов с Allure
+
+1. Запустить тесты и сохранить результаты
+pytest . --alluredir=./allure-results -v
+
+2. Сгенерировать HTML отчёт
+allure generate ./allure-results -o ./allure-report --clean
+
+3. Открыть отчёт в браузере
+allure open ./allure-report
+
+Примечание:
+Папки allure-results/ и allure-report/ добавлены в .gitignore
+Для работы Allure требуется установленная Java (JRE 8+)
